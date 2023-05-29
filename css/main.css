@@ -1,0 +1,191 @@
+:root{
+    --color-blue-dark: #04081B;
+    --color-blue: #183AB2;
+    --color-blue-hover: #1845e9;
+    --color-black: #0D0101;
+    --color-white: #EDEDED;
+    --color-gray-ligth: #E4E4E4;
+    --color-gray-dark: #8e8e8e;
+    --color-vino: #B41313;
+    --color-vino-hover: #cb1111;
+    --color-pink: #B218AC;
+    --color-pink-hover: #d11acb;
+
+    --font: 'Poppins', arial;
+}
+/* Globales */
+body{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(var(--color-blue-dark)70%, var(--color-black));
+}
+.title{
+    color: var(--color-white);
+    font-family: var(--font);
+    padding: 3rem 0;
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+}
+/* LOADER */
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--color-black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    transition: .5s linear;
+}
+.loader--remove{
+    left: -150%;
+    opacity: 0;
+    z-index: -1;
+}
+.loader__content{
+    width: 82%;
+    padding: 4rem 0;
+}
+.loader__link{
+    font-family: var(--font);
+    font-size: 2rem;
+    color: var(--color-white);
+    margin-bottom: 2rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.icon{
+    max-width: 4rem;
+    height: 4rem;
+    overflow: hidden;
+    display: flex;
+    margin-left: 1rem;
+}
+/* CALCULADORA */
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container{
+    background-color: #ffffff17;
+    backdrop-filter: blur(2rem);
+    border-radius: 1rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: 
+    "display display display display"
+    "display display display display"
+    "clear delete divi multi"
+    "siete ocho nueve menos"
+    "cuatro cinco seis sumar"
+    "uno dos tres sumar"
+    "cero cero punto igual";
+    font-family: var(--font);
+    width: 100%;
+    max-width: 35rem;
+    gap: 1rem;
+    /* box-shadow: 0px -1px 5px var(--color-gray-ligth); */
+}
+.display{
+    grid-area: display;
+    padding: 2rem;
+    text-align: right;
+    background: linear-gradient(var(--color-gray-ligth)5%, var(--color-gray-dark));
+    border-radius: .7rem;
+    font-size: 4rem;
+    font-weight: 600;
+    overflow-x: auto;
+    box-shadow: 0px 3px 4px var(--color-black);
+    margin-bottom: 2rem;
+}
+.btn{
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    border: 1px solid var(--color-gray-dark);
+    border-radius: 1rem;
+    cursor: pointer;
+    background: transparent;
+}
+.btn:focus{
+    outline: none;
+}
+.btn--delete picture{
+    width: 3.5rem;
+    display: grid;
+    place-content: center;
+}
+.btn--divi{
+    font-size: 1.7rem;
+}
+.btn--clear{
+    background: var(--color-vino);
+}
+.btn--plus{
+    background: var(--color-pink);
+    grid-area: sumar;
+}
+.btn--result{
+    background: var(--color-blue);
+}
+.btn--cero{
+    grid-area: cero;
+}
+.btn:active{
+    background: var(--color-blue-dark);
+}
+/* BOTON DEL LOADER */
+.btn--remove{
+    font-family: var(--font);
+    font-size: 2rem;
+    padding: 2rem;
+    background: var(--color-blue-hover);
+    border: none;
+}
+@media screen and (min-width: 768px) {
+    .title{
+        font-size: 5rem;
+    }
+    .btn{
+        transition: .3s linear;
+    }
+    @media (hover: hover){
+        .btn:hover{
+            background: var(--color-blue-dark);
+        }
+        .btn--clear:hover{
+            background: var(--color-vino-hover);
+        }
+        .btn--plus:hover{
+            background: var(--color-pink-hover);
+        }
+        .btn--result:hover{
+            background: var(--color-blue-hover);
+        }
+    }
+}
+@media screen and (max-width: 360px) {
+    .btn{
+        font-size: 1.9rem;
+        width: 90%;
+    }
+    .container{
+        grid-gap: 5px;
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <meta name="description" content="calculadora proyectos web, html, css, javascript, tendencias">
+    <link rel="shortcut icon" href="./img/favicon.jpg" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    
+    <!-- Codigo Js -->
+    <script defer src="./js/index.js"></script>
+
+</head>
+<body>
+
+    <div class="loader">
+        <p class="title loader__title">Realizado con las siguientes tecnologías:</p>
+
+        <ul class="loader__content">
+            <li class="loader__link">Html <span class="icon"><img src="./img/html.png" alt="imagen representativa de html"></span></li>
+            <li class="loader__link">Css <span class="icon"><img src="./img/css.png" alt="imagen representativa de css"></span></li>
+            <li class="loader__link">Vanilla Javascript <span class="icon"><img src="./img/js.png" alt="imagen representativa de Javascript"></span></li>
+            <li><a href="https://www.figma.com/file/RMNP8Rtg0BUkLpvlG3tQ7i/calculadora?t=ffj1lAX4KnTDt61C-1" class="loader__link" target="_blank">Figma <span class="icon"><img src="./img/figma.png" alt="imagen representativa de figma"></span></a></li>
+        </ul>
+
+        <button class="btn btn--remove">Comenzar</button>
+    </div>
+
+    <main class="main">
+        <h1 class="title">Calculadora</h1>
+
+        <div class="container">
+            <div class="display" id="display">0</div>
+            <button type="button" class="btn btn--clear">C</button>
+            <button type="button" class="btn btn--delete"><picture>
+                <source srcset="./img/Clear Symbol.svg" type="image/svg">
+                <img src="./img/Clear Symbol.png" alt="img delete">
+            </picture></button>
+            <button type="button" class="boton btn btn--divi">/</button>
+            <button type="button" class="boton btn">*</button>
+            <button type="button" class="boton btn">7</button>
+            <button type="button" class="boton btn">8</button>
+            <button type="button" class="boton btn">9</button>
+            <button type="button" class="boton btn">-</button>
+            <button type="button" class="boton btn">4</button>
+            <button type="button" class="boton btn">5</button>
+            <button type="button" class="boton btn">6</button>
+            <button type="button" class="boton btn btn--plus">+</button>
+            <button type="button" class="boton btn">1</button>
+            <button type="button" class="boton btn">2</button>
+            <button type="button" class="boton btn">3</button>
+            <button type="button" class="boton btn btn--cero">0</button>
+            <button type="button" class="boton btn">.</button>
+            <button type="button" class="btn btn--result">=</button>
+        </div>
+    </main>
+    
+</body>
+</html>
